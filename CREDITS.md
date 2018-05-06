@@ -10,6 +10,11 @@
 
   + https://docs.python.org/3/library/venv.html#module-venv
 
+## Deployment Environments
+
+  + http://flask.pocoo.org/docs/1.0/deploying/#deployment
+  + https://devcenter.heroku.com/articles/getting-started-with-python#introduction
+
 ## Dev Process
 
 Setup repo:
@@ -39,4 +44,17 @@ Run a local web server:
 
 ```sh
 (venv) flask run
+```
+
+## Deployment Process
+
+Create a new heroku app:
+
+```sh
+heroku login
+heroku create
+heroku apps:rename nyu-info-2335-flask-test -a my-app
+git remote -v
+#> heroku	https://git.heroku.com/nyu-info-2335-flask-test.git (fetch)
+#> heroku	https://git.heroku.com/nyu-info-2335-flask-test.git (push)
 ```
