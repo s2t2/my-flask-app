@@ -10,11 +10,14 @@
 
   + https://docs.python.org/3/library/venv.html#module-venv
 
-## Deployment Environments
+## Deployment Environments (Heroku)
 
   + http://flask.pocoo.org/docs/1.0/deploying/#deployment
   + https://devcenter.heroku.com/articles/getting-started-with-python#introduction
   + https://devcenter.heroku.com/articles/python-support
+  + https://devcenter.heroku.com/articles/git
+  + https://help.heroku.com/W23OAFGK/why-am-i-seeing-couldn-t-find-that-process-type-when-trying-to-scale-dynos
+  + https://devcenter.heroku.com/articles/procfile
 
 ## Package Dependencies (Pipenv)
 
@@ -87,4 +90,27 @@ Fix deployment issues (need `Pipfile` or `requirements.txt` to signal that this 
 ```sh
 pip3 install pipenv # also available: brew install pipenv
 pipenv install
+```
+
+Try again to deploy:
+
+```sh
+git push heroku deploy:master # (from a "deploy" branch where I had been making changes)
+heroku open #> https://nyu-info-2335-flask-test.herokuapp.com/
+#> Application Error
+```
+
+Deploy succeeded but there is an application error, so check the logs:
+
+```sh
+heroku logs
+#> No web processes running
+```
+
+Start a web process:
+
+```sh
+heroku ps #> No dynos on ⬢ nyu-info-2335-flask-test
+heroku ps:scale web=1 #> Couldn't find that process type.
+# hmm...
 ```
