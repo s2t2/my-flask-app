@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>
+      {% block title %}
+        My Flask App
+      {% endblock %}
+    </title>
+    {% endblock %}
+  </head>
+  <body>
+    <div id="content">
+      {% block content %}
+      {% endblock %}
+    </div>
+    <div id="footer">
+      {% block footer %}
+        &copy; Copyright 2018 <a href="https://github.com/s2t2/my-flask-app">Prof. Rossetti</a>.
+      {% endblock %}
+    </div>
+  </body>
+</html>

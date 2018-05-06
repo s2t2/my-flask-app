@@ -24,7 +24,7 @@ The following commands assume you are running them inside a pipenv shell. Get in
 Run webserver:
 
 ```sh
-gunicorn app:app # then visit on localhost:8000 in a browser...
+FLASK_ENV=development flask run # then visit localhost:5000 in a browser...
 ```
 
 Run tests:

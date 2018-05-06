@@ -6,6 +6,8 @@
   + http://flask.pocoo.org/docs/1.0/installation/#create-an-environment
   + http://flask.pocoo.org/docs/1.0/quickstart/
   + http://flask.pocoo.org/docs/1.0/quickstart/#debug-mode
+  + http://flask.pocoo.org/docs/1.0/patterns/templateinheritance/
+  + http://flask.pocoo.org/docs/1.0/quickstart/#static-files
 
 ## Virtual Environments
 
@@ -27,3 +29,7 @@
   + https://docs.pipenv.org/
   + https://docs.pipenv.org/install/#installing-pipenv
   + https://stackoverflow.com/questions/990754/how-to-leave-exit-deactivate-a-python-virtualenv
+
+## Previous Projects
+
+  + https://github.com/prof-rossetti/salad-system-alchemy
