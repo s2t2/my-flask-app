@@ -19,6 +19,7 @@
   + https://devcenter.heroku.com/articles/git
   + https://help.heroku.com/W23OAFGK/why-am-i-seeing-couldn-t-find-that-process-type-when-trying-to-scale-dynos
   + https://devcenter.heroku.com/articles/procfile
+  + https://github.com/datademofun/heroku-basic-flask
 
 ## Package Dependencies (Pipenv)
 
@@ -142,6 +143,5 @@ Try to deploy again:
 
 ```sh
 git push heroku deploy:master
-heroku open
-
+heroku open #> success!
 ```
