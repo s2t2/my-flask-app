@@ -32,3 +32,11 @@ Run tests:
 ```sh
 # todo
 ```
+
+## Contributing
+
+## Deploying
+
+```sh
+git push heroku mybranch:master # -a nyu-info-2335-flask-test
+```
