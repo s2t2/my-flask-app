@@ -113,4 +113,15 @@ Start a web process:
 heroku ps #> No dynos on ⬢ nyu-info-2335-flask-test
 heroku ps:scale web=1 #> Couldn't find that process type.
 # hmm...
+touch Procfile # and paste inside... web: python app.py
+```
+
+Try to deploy again:
+
+```sh
+git push heroku deploy:master
+heroku open
+heroku logs #> ModuleNotFoundError: No module named 'flask'
+# oh that's right because its not in the Pipfile...
+pipenv install flask
 ```
