@@ -5,6 +5,7 @@
   + http://flask.pocoo.org/
   + http://flask.pocoo.org/docs/1.0/installation/#create-an-environment
   + http://flask.pocoo.org/docs/1.0/quickstart/
+  + http://flask.pocoo.org/docs/1.0/quickstart/#debug-mode
 
 ## Virtual Environments
 
@@ -124,4 +125,23 @@ heroku open
 heroku logs #> ModuleNotFoundError: No module named 'flask'
 # oh that's right because its not in the Pipfile...
 pipenv install flask
+```
+
+Try to deploy again:
+
+```sh
+git push heroku deploy:master
+heroku open
+heroku logs #> ModuleNotFoundError: No module named 'flask'
+# hmmm let's try using a gunicorn server
+pipenv install gunicorn
+gunicorn app:app # then visit on localhost:8000 to verify
+```
+
+Try to deploy again:
+
+```sh
+git push heroku deploy:master
+heroku open
+
 ```
