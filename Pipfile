@@ -8,6 +8,7 @@ flask = "*"
 gunicorn = "*"
 flask-sqlalchemy = "*"
 "psycopg2" = "*"
+ipython = "*"
 
 [dev-packages]
 

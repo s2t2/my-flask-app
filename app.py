@@ -1,10 +1,9 @@
 #from dotenv import load_dotenv
 import os
+from IPython import embed
 from flask import Flask
 from flask import render_template
 from flask_sqlalchemy import SQLAlchemy
-
-#from db import db
 
 #load_dotenv()
 
@@ -28,6 +27,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app) # db.init_app(app)
+
+def rollback_and_print(error):
+    print("  --> ERROR %s" % (error._message))
+    db.session.rollback() # to avoid sqlalchemy.exc.InvalidRequestError
 
 #
 # MODELS

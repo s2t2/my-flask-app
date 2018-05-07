@@ -31,9 +31,12 @@
   + https://docs.pipenv.org/install/#installing-pipenv
   + https://stackoverflow.com/questions/990754/how-to-leave-exit-deactivate-a-python-virtualenv
 
-## Previous Projects
+## Previous Projects and Notes
 
   + https://github.com/prof-rossetti/salad-system-alchemy
+  + https://github.com/prof-rossetti/salad-system-alchemy/blob/master/hello.py
+  + https://github.com/prof-rossetti/salad-system-alchemy/blob/master/data/populate_database.py
+  + https://github.com/s2t2/react-robots/blob/master/db/default_robots.js
 
 ## Flask + SQLAlchemy + PostgreSQL
 
