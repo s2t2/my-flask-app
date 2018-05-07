@@ -8,6 +8,7 @@
   + http://flask.pocoo.org/docs/1.0/quickstart/#debug-mode
   + http://flask.pocoo.org/docs/1.0/patterns/templateinheritance/
   + http://flask.pocoo.org/docs/1.0/quickstart/#static-files
+  + http://flask.pocoo.org/docs/1.0/api/
 
 ## Virtual Environments
 
@@ -33,3 +34,10 @@
 ## Previous Projects
 
   + https://github.com/prof-rossetti/salad-system-alchemy
+
+## Flask + SQLAlchemy + PostgreSQL
+
+  + http://flask-sqlalchemy.pocoo.org/2.3/
+  + https://docs.sqlalchemy.org/en/latest/
+  + https://docs.sqlalchemy.org/en/latest/orm/tutorial.html
+  + https://vsupalov.com/flask-sqlalchemy-postgres/
