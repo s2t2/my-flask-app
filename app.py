@@ -1,10 +1,64 @@
+#from dotenv import load_dotenv
+import os
 from flask import Flask
 from flask import render_template
+from flask_sqlalchemy import SQLAlchemy
 
-#from dotenv import load_dotenv
+#from db import db
+
 #load_dotenv()
 
+#
+# APP
+#
+
 app = Flask(__name__)
+
+#
+# DB
+#
+
+try:
+    DATABASE_URL = os.environ["DATABASE_URL"]
+except KeyError as e:
+    DATABASE_URL = "postgresql://localhost/my_flask_app"
+print(DATABASE_URL)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app) # db.init_app(app)
+
+#
+# MODELS
+#
+
+class Robot(db.Model):
+    __tablename__ = "robots"
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(80), unique=True, nullable=False)
+    description = db.Column(db.Text, unique=True)
+
+    def __init__(self, options):
+        self.name = options["name"]
+        self.description = options["description"]
+
+    def __repr__(self):
+        return '<Robot %r>' % self.name
+
+
+
+
+
+
+
+
+
+
+#
+# ROUTES
+#
 
 @app.route('/')
 def index():

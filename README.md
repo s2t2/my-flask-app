@@ -1,8 +1,20 @@
 # My Flask App
 
-## Installation
+## Prerequisites
 
-Prerequisites: Install Git and Python (~> 3.6.5) and Pipenv (~> 11.10.1).
+Requires:
+
+  + Git
+  + Python (~> 3.6.5) and Pipenv (~> 11.10.1).
+  + PostgreSQL
+
+Create a development environment database:
+
+```sh
+psql -c "CREATE DATABASE my_flask_app;"
+```
+
+## Installation
 
 Install source code:
 
@@ -17,9 +29,20 @@ Install package dependencies:
 pipenv install
 ```
 
-## Usage
+All following commands assume you are running them inside a pipenv shell:
 
-The following commands assume you are running them inside a pipenv shell. Get into one by typing `pipenv shell`.
+```sh
+pipenv shell
+```
+
+Migrate and seed the database:
+
+```sh
+python migrate.py
+python seed.py
+```
+
+## Usage
 
 Run webserver:
 
